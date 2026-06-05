@@ -4,149 +4,347 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mikora Intelligence</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#050505;
+color:#f6f2e8;
+font-family:Arial,Helvetica,sans-serif;
+line-height:1.6;
+overflow-x:hidden;
+}
+
+.hero{
+min-height:100vh;
+display:grid;
+grid-template-columns:46% 54%;
+align-items:center;
+padding:64px 5vw 64px 6vw;
+background:
+radial-gradient(circle at 78% 56%,rgba(212,175,55,.16),transparent 32%),
+linear-gradient(90deg,#050505 0%,#050505 52%,#090807 100%);
+}
+
+.hero-content{
+max-width:700px;
+z-index:2;
+}
+
+.logo{
+width:180px;
+height:auto;
+display:block;
+margin-bottom:44px;
+}
+
+h1{
+font-size:clamp(44px,4.7vw,72px);
+line-height:1.04;
+letter-spacing:-3px;
+font-weight:800;
+color:#fff;
+margin-bottom:32px;
+}
+
+.gold-line{
+width:120px;
+height:2px;
+background:linear-gradient(90deg,#d4af37,transparent);
+margin-bottom:32px;
+}
+
+.hero-subtitle{
+font-size:22px;
+line-height:1.65;
+color:#f4efe5;
+margin-bottom:24px;
+max-width:680px;
+}
+
+.hero-text{
+font-size:20px;
+line-height:1.7;
+color:#c9bfad;
+max-width:690px;
+}
+
+.hero-visual{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:flex-end;
+}
+
+.phone{
+height:96vh;
+width:auto;
+max-width:none;
+display:block;
+object-fit:contain;
+}
+
+section.content{
+padding:105px 9vw;
+background:#050505;
+border-top:1px solid rgba(212,175,55,.16);
+}
+
+.content h2,
+.visual h2,
+.contact h2{
+font-size:clamp(36px,4vw,58px);
+line-height:1.08;
+letter-spacing:-2px;
+color:#fff;
+margin-bottom:28px;
+max-width:1000px;
+}
+
+.content p,
+.visual p,
+.contact p{
+font-size:20px;
+line-height:1.75;
+color:#bdb5a6;
+max-width:980px;
+margin-bottom:18px;
+}
+
+.visual{
+padding:105px 5vw;
+text-align:center;
+background:#050505;
+border-top:1px solid rgba(212,175,55,.16);
+}
+
+.visual h2,
+.visual p{
+margin-left:auto;
+margin-right:auto;
+}
+
+.visual img{
+width:100%;
+max-width:1500px;
+display:block;
+margin:44px auto 0 auto;
+border-radius:24px;
+box-shadow:0 45px 130px rgba(0,0,0,.75);
+}
+
+.contact{
+padding:115px 8vw;
+background:#050505;
+text-align:center;
+border-top:1px solid rgba(212,175,55,.16);
+}
+
+.contact h2,
+.contact p{
+margin-left:auto;
+margin-right:auto;
+}
+
+.email{
+display:inline-block;
+margin-top:38px;
+padding:18px 36px;
+border:1px solid rgba(212,175,55,.32);
+border-radius:16px;
+background:rgba(255,255,255,.025);
+color:#fff;
+font-size:21px;
+font-weight:700;
+letter-spacing:1px;
+}
+
+footer{
+padding:75px 20px;
+background:#050505;
+text-align:center;
+border-top:1px solid rgba(212,175,55,.16);
+}
+
+.footer-logo{
+width:105px;
+height:auto;
+display:block;
+margin:0 auto 22px auto;
+}
+
+footer p{
+color:#8f887c;
+font-size:14px;
+}
+
+@media(max-width:950px){
+.hero{
+grid-template-columns:1fr;
+padding:64px 7vw 76px 7vw;
+background:
+radial-gradient(circle at 50% 82%,rgba(212,175,55,.12),transparent 34%),
+#050505;
+}
+
+.logo{
+width:155px;
+margin-bottom:38px;
+}
+
+h1{
+font-size:38px;
+line-height:1.08;
+letter-spacing:-1.8px;
+margin-bottom:26px;
+}
+
+.gold-line{
+margin-bottom:26px;
+}
+
+.hero-subtitle,
+.hero-text{
+font-size:18px;
+line-height:1.65;
+}
+
+.hero-visual{
+height:auto;
+margin-top:46px;
+justify-content:center;
+}
+
+.phone{
+height:auto;
+width:100%;
+max-width:420px;
+}
+
+section.content{
+padding:72px 7vw;
+}
+
+.visual{
+padding:72px 4vw;
+}
+
+.visual img{
+border-radius:16px;
+margin-top:32px;
+}
+
+.content h2,
+.visual h2,
+.contact h2{
+font-size:34px;
+letter-spacing:-1px;
+}
+
+.content p,
+.visual p,
+.contact p{
+font-size:17px;
+line-height:1.7;
+}
+
+.contact{
+padding:82px 7vw;
+}
+
+.email{
+width:100%;
+max-width:360px;
+font-size:16px;
+letter-spacing:.5px;
+padding:16px 18px;
+}
+
+.footer-logo{
+width:90px;
+}
+}
+</style>
 </head>
 
 <body>
 
 <section class="hero">
-  <div class="hero-copy">
-    <img src="assets/IMG_1426.PNG" alt="Mikora Logo" class="hero-logo">
+<div class="hero-content">
+<img src="assets/IMG_1426.PNG" alt="Mikora Intelligence Logo" class="logo">
 
-    <h1>Operational Intelligence Infrastructure For Modern Organisations</h1>
+<h1>Operational Intelligence Infrastructure For Modern Organisations</h1>
 
-    <p class="hero-subtitle">
-      Transform expertise into scalable support, structured oversight, operational visibility, and consistent decision-making.
-    </p>
+<div class="gold-line"></div>
 
-    <p>
-      Mikora combines intelligent support systems, organisational memory, escalation workflows, trainer notification processes, and operational reporting into one connected platform — custom designed around the needs of each organisation.
-    </p>
-  </div>
+<p class="hero-subtitle">
+Transform expertise into scalable support, structured oversight, operational visibility, and consistent decision-making.
+</p>
 
-  <div class="hero-image-wrap">
-    <img src="assets/phone2.PNG" alt="Mikora WhatsApp Support" class="hero-phone">
-  </div>
+<p class="hero-text">
+Mikora combines intelligent support systems, organisational memory, escalation workflows, trainer notification processes, and operational reporting into one connected platform — custom designed around the needs of each organisation.
+</p>
+</div>
+
+<div class="hero-visual">
+<img src="assets/phone2.PNG" alt="Mikora WhatsApp Support" class="phone">
+</div>
 </section>
 
-<div class="section-line"></div>
-
-<section class="text-section">
-  <h2>Expertise Should Not Be Limited By Availability</h2>
-
-  <p>
-    As organisations grow, support demand increases. Questions repeat. Trainers become bottlenecks. Critical knowledge sits with a small number of experienced individuals.
-  </p>
-
-  <p>
-    Mikora creates a structured operational layer that makes expertise available consistently while keeping human oversight where it matters most.
-  </p>
+<section class="content">
+<h2>Expertise Should Not Be Limited By Availability</h2>
+<p>As organisations grow, support demand increases. Questions repeat. Trainers become bottlenecks. Critical knowledge sits with a small number of experienced individuals.</p>
+<p>Mikora creates a structured operational layer that makes expertise available consistently while keeping human oversight where it matters most.</p>
 </section>
 
-<div class="section-line"></div>
-
-<section class="text-section">
-  <h2>Built Around Each Organisation</h2>
-
-  <p>
-    Mikora is not limited to the beauty industry, aesthetic clinics, training academies, or healthcare environments.
-  </p>
-
-  <p>
-    The platform can be tailored for any organisation that relies on expertise, support workflows, escalation management, operational oversight, knowledge distribution, trainer enablement, or structured decision-making.
-  </p>
-
-  <p>
-    Every deployment is configured around the organisation's communication standards, escalation pathways, reporting requirements, operational processes, and strategic objectives.
-  </p>
+<section class="content">
+<h2>Built Around Each Organisation</h2>
+<p>Mikora is not limited to the beauty industry, aesthetic clinics, training academies, or healthcare environments.</p>
+<p>The platform can be tailored for any organisation that relies on expertise, support workflows, escalation management, operational oversight, knowledge distribution, trainer enablement, or structured decision-making.</p>
+<p>Every deployment is configured around the organisation's communication standards, escalation pathways, reporting requirements, operational processes, and strategic objectives.</p>
 </section>
 
-<div class="section-line"></div>
-
-<section class="visual-section">
-  <div class="section-heading">
-    <h2>Escalation Intelligence & Trainer Oversight</h2>
-
-    <p>
-      Mikora connects support, memory, escalation detection, trainer notification, and operational visibility into one structured workflow.
-    </p>
-  </div>
-
-  <img src="assets/mikorainaction.PNG" alt="Mikora In Action" class="wide-image">
+<section class="visual">
+<h2>Escalation Intelligence & Trainer Oversight</h2>
+<p>Mikora connects support, memory, escalation detection, trainer notification, and operational visibility into one structured workflow.</p>
+<img src="assets/mikorainaction.PNG" alt="Mikora In Action">
 </section>
 
-<div class="section-line"></div>
-
-<section class="visual-section">
-  <div class="section-heading">
-    <h2>Mikora Today</h2>
-
-    <p>
-      A powerful intelligence platform delivering real support, real oversight, and real operational impact.
-    </p>
-  </div>
-
-  <img src="assets/mikoratoday.PNG" alt="Mikora Today" class="wide-image">
+<section class="visual">
+<h2>Mikora Today</h2>
+<img src="assets/mikoratoday.PNG" alt="Mikora Today">
 </section>
 
-<div class="section-line"></div>
-
-<section class="text-section">
-  <h2>From Support Conversations To Operational Intelligence</h2>
-
-  <p>
-    Every support interaction contains valuable operational information.
-  </p>
-
-  <p>
-    Mikora helps organisations understand where support demand is increasing, which topics repeat, where risks emerge, and where additional oversight, training, or resources may be required.
-  </p>
-
-  <p>
-    Over time, support activity becomes a source of operational intelligence, helping organisations improve consistency, quality, and decision-making.
-  </p>
+<section class="content">
+<h2>From Support Conversations To Operational Intelligence</h2>
+<p>Every support interaction contains valuable operational information.</p>
+<p>Mikora helps organisations understand where support demand is increasing, which topics repeat, where risks emerge, and where additional oversight, training, or resources may be required.</p>
 </section>
 
-<div class="section-line"></div>
-
-<section class="text-section">
-  <h2>Built To Extend Human Expertise</h2>
-
-  <p>
-    Mikora is not designed to replace trainers, managers, consultants, or subject matter experts.
-  </p>
-
-  <p>
-    It is designed to extend their reach.
-  </p>
-
-  <p>
-    Routine support can be handled consistently while higher-risk situations are escalated immediately. Teams remain focused on complex decisions, education, quality improvement, and strategic growth.
-  </p>
+<section class="content">
+<h2>Built To Extend Human Expertise</h2>
+<p>Mikora is not designed to replace trainers, managers, consultants, or subject matter experts.</p>
+<p>It is designed to extend their reach. Routine support can be handled consistently while higher-risk situations are escalated immediately.</p>
 </section>
 
-<div class="section-line"></div>
-
-<section class="contact-section">
-  <h2>Start A Conversation</h2>
-
-  <p>
-    Explore how Mikora can be tailored to support your organisation's expertise, operational workflows, support infrastructure, escalation processes, and intelligence requirements.
-  </p>
-
-  <div class="contact-email">
-    HELLO@MIKORAINTELLIGENCE.COM
-  </div>
+<section class="contact">
+<h2>Start A Conversation</h2>
+<p>Explore how Mikora can be tailored to support your organisation's expertise, operational workflows, support infrastructure, escalation processes, and intelligence requirements.</p>
+<div class="email">HELLO@MIKORAINTELLIGENCE.COM</div>
 </section>
-
-<div class="section-line"></div>
 
 <footer>
-  <img src="assets/IMG_1426.PNG" alt="Mikora Logo" class="footer-logo">
-
-  <p>
-    Operational Intelligence Infrastructure
-  </p>
+<img src="assets/IMG_1426.PNG" alt="Mikora Logo" class="footer-logo">
+<p>Operational Intelligence Infrastructure</p>
 </footer>
 
 </body>
