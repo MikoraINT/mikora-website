@@ -9,6 +9,7 @@ padding:0;
 --gold:#d4af37;
 --text:#f6f2e8;
 --muted:#b9b3a7;
+--line:rgba(212,175,55,.16);
 }
 
 html{
@@ -23,12 +24,14 @@ line-height:1.65;
 overflow-x:hidden;
 }
 
+/* HERO */
+
 .hero{
 min-height:92vh;
 background:
-linear-gradient(90deg,#050505 0%,#050505 47%,rgba(5,5,5,.78) 61%,rgba(5,5,5,.08) 100%),
+linear-gradient(90deg,#050505 0%,#050505 45%,rgba(5,5,5,.72) 60%,rgba(5,5,5,.04) 100%),
 url("assets/phone2.PNG");
-background-size:auto 100%;
+background-size:auto 112%;
 background-repeat:no-repeat;
 background-position:right center;
 display:flex;
@@ -51,16 +54,16 @@ background:none;
 }
 
 h1{
-font-size:clamp(48px,6vw,84px);
-line-height:.98;
+font-size:clamp(44px,5.4vw,76px);
+line-height:1;
 letter-spacing:-3px;
 margin-bottom:30px;
 max-width:850px;
 }
 
 .hero-subtitle{
-font-size:24px;
-color:#fff;
+font-size:23px;
+color:#ffffff;
 max-width:780px;
 margin-bottom:22px;
 }
@@ -72,6 +75,8 @@ max-width:900px;
 margin-bottom:18px;
 }
 
+/* SECTION SEPARATORS */
+
 .section-line{
 height:1px;
 width:78%;
@@ -79,10 +84,26 @@ margin:0 auto;
 background:linear-gradient(90deg,transparent,rgba(212,175,55,.55),transparent);
 }
 
+/* TEXT SECTIONS */
+
 .text-section{
 padding:105px 12%;
 max-width:1320px;
 margin:0 auto;
+position:relative;
+}
+
+.text-section::before,
+.visual-section::before,
+.contact-section::before{
+content:"";
+position:absolute;
+top:0;
+left:50%;
+transform:translateX(-50%);
+width:180px;
+height:1px;
+background:linear-gradient(90deg,transparent,rgba(212,175,55,.7),transparent);
 }
 
 h2{
@@ -93,21 +114,28 @@ margin-bottom:28px;
 max-width:1000px;
 }
 
+.text-section p{
+max-width:980px;
+}
+
+/* VISUAL SECTIONS */
+
 .visual-section{
 padding:115px 4%;
 position:relative;
 }
 
-.visual-section::before{
+.visual-section::after{
 content:"";
 position:absolute;
 left:18%;
 right:18%;
 top:18%;
 height:360px;
-background:radial-gradient(circle,rgba(212,175,55,.09),transparent 70%);
+background:radial-gradient(circle,rgba(212,175,55,.08),transparent 70%);
 filter:blur(38px);
 z-index:0;
+pointer-events:none;
 }
 
 .section-heading{
@@ -140,60 +168,82 @@ border-radius:22px;
 box-shadow:0 40px 120px rgba(0,0,0,.68);
 }
 
+/* START A CONVERSATION */
+
 .contact-section{
-padding:125px 10%;
+padding:140px 8%;
 text-align:center;
-max-width:1100px;
+position:relative;
+max-width:1200px;
 margin:0 auto;
 }
 
 .contact-section h2{
-margin:0 auto 26px auto;
+font-size:clamp(42px,4vw,64px);
+font-weight:700;
+margin:0 auto 30px auto;
+line-height:1.1;
 }
 
 .contact-section p{
-margin:0 auto 34px auto;
-max-width:760px;
+max-width:900px;
+margin:0 auto;
+font-size:20px;
+line-height:1.8;
+color:#cfcfcf;
 }
 
 .contact-email{
-font-size:clamp(22px,3vw,38px);
-font-weight:800;
-letter-spacing:2px;
-color:#fff;
-text-transform:uppercase;
-margin-top:18px;
+display:inline-block;
+margin-top:40px;
+padding:18px 36px;
+border-radius:16px;
+border:1px solid rgba(212,175,55,.25);
+background:rgba(255,255,255,.02);
+font-size:22px;
+font-weight:600;
+letter-spacing:1px;
+color:#ffffff;
+text-decoration:none;
+box-shadow:none;
 }
 
+/* FOOTER */
+
 footer{
-padding:70px 10%;
+padding:80px 20px;
 text-align:center;
+border-top:1px solid rgba(212,175,55,.15);
 }
 
 .footer-logo{
-width:110px;
+width:100px;
 height:auto;
 display:block;
-margin:0 auto 22px auto;
+margin:0 auto 20px auto;
 filter:none;
 box-shadow:none;
 }
 
 footer p{
-font-size:15px;
-color:#8d887f;
+font-size:14px;
+color:#999;
 margin:0 auto;
 }
 
+/* RESPONSIVE */
+
 @media(max-width:1000px){
+
 .hero{
 background:
-linear-gradient(180deg,#050505 0%,rgba(5,5,5,.72) 55%,rgba(5,5,5,.15) 100%),
+linear-gradient(180deg,#050505 0%,rgba(5,5,5,.78) 52%,rgba(5,5,5,.18) 100%),
 url("assets/phone2.PNG");
 background-size:cover;
 background-position:right center;
 padding:80px 8%;
 align-items:flex-start;
+min-height:90vh;
 }
 
 .hero-copy{
@@ -207,9 +257,14 @@ padding:85px 8%;
 .visual-section{
 padding:85px 4%;
 }
+
+.contact-section{
+padding:110px 8%;
+}
 }
 
 @media(max-width:600px){
+
 .hero-logo{
 width:135px;
 }
@@ -232,7 +287,12 @@ border-radius:14px;
 }
 
 .contact-email{
-font-size:19px;
-letter-spacing:1px;
+font-size:17px;
+letter-spacing:.5px;
+padding:16px 22px;
+}
+
+footer{
+padding:60px 20px;
 }
 }
