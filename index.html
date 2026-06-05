@@ -27,7 +27,7 @@ overflow-x:hidden;
 .hero{
 min-height:100vh;
 display:grid;
-grid-template-columns:38% 62%;
+grid-template-columns:42% 58%;
 align-items:center;
 padding:64px 0 64px 6vw;
 background:#050505;
@@ -82,19 +82,20 @@ height:100vh;
 display:flex;
 align-items:center;
 justify-content:flex-end;
-overflow:visible;
-}
-  
-.phone{
-width:72vw;
-max-width:none;
-height:auto;
-display:block;
-object-fit:contain;
-margin-right:-6vw;
-transform:none;
+overflow:hidden;
 }
 
+.phone{
+height:115vh;
+width:auto;
+max-width:none;
+display:block;
+object-fit:cover;
+object-position:right center;
+margin-right:-2vw;
+transform:none;
+}
+  
 section.content{
 padding:105px 9vw;
 background:#050505;
