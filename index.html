@@ -217,22 +217,31 @@ text-shadow:
 .contact h2::before{
 content:"";
 position:absolute;
-width:520px;
-height:220px;
+width:700px;
+height:320px;
 left:50%;
 top:50%;
 transform:translate(-50%,-50%);
 background:radial-gradient(
 ellipse,
-rgba(212,175,55,.16) 0%,
-rgba(212,175,55,.07) 35%,
+rgba(212,175,55,.35) 0%,
+rgba(212,175,55,.18) 35%,
+rgba(212,175,55,.08) 55%,
 transparent 75%
 );
-filter:blur(70px);
+filter:blur(90px);
 z-index:-1;
 pointer-events:none;
 }
-
+.content h2,
+.visual h2,
+.contact h2{
+position:relative;
+z-index:2;
+text-shadow:
+0 0 20px rgba(212,175,55,.25),
+0 0 40px rgba(212,175,55,.15);
+}
 .content::after,
 .visual::after,
 .contact::after{
@@ -273,18 +282,18 @@ pointer-events:none;
 footer::before{
 content:"";
 position:absolute;
-width:520px;
-height:220px;
+width:700px;
+height:300px;
 left:50%;
 top:50%;
 transform:translate(-50%,-50%);
 background:radial-gradient(
 circle,
-rgba(212,175,55,.12),
-rgba(212,175,55,.04),
-transparent 72%
+rgba(212,175,55,.25),
+rgba(212,175,55,.08),
+transparent 75%
 );
-filter:blur(95px);
+filter:blur(100px);
 pointer-events:none;
 }
 
