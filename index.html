@@ -29,10 +29,11 @@ min-height:100vh;
 display:grid;
 grid-template-columns:38% 62%;
 align-items:center;
-padding:64px 4vw 64px 6vw;
+padding:64px 0 64px 6vw;
 background:#050505;
+overflow:hidden;
 }
-
+  
 .hero-content{
 max-width:700px;
 z-index:2;
@@ -83,13 +84,14 @@ align-items:center;
 justify-content:flex-end;
 overflow:visible;
 }
-
+  
 .phone{
-height:90vh;
-width:auto;
-max-width:100%;
+width:72vw;
+max-width:none;
+height:auto;
 display:block;
 object-fit:contain;
+margin-right:-6vw;
 transform:none;
 }
 
