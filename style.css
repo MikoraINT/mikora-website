@@ -27,38 +27,38 @@ overflow-x:hidden;
 /* HERO */
 
 .hero{
-min-height:92vh;
+min-height:88vh;
 background:
-linear-gradient(90deg,#050505 0%,#050505 45%,rgba(5,5,5,.72) 60%,rgba(5,5,5,.04) 100%),
+linear-gradient(90deg,#050505 0%,#050505 42%,rgba(5,5,5,.68) 57%,rgba(5,5,5,0) 100%),
 url("assets/phone2.PNG");
-background-size:auto 112%;
+background-size:auto 128%;
 background-repeat:no-repeat;
-background-position:right center;
+background-position:112% center;
 display:flex;
 align-items:center;
-padding:90px 10%;
+padding:55px 8% 70px 8%;
 }
 
 .hero-copy{
-max-width:820px;
+max-width:880px;
 }
 
 .hero-logo{
-width:175px;
+width:205px;
 height:auto;
 display:block;
-margin-bottom:38px;
+margin-bottom:46px;
 filter:none;
 box-shadow:none;
 background:none;
 }
 
 h1{
-font-size:clamp(44px,5.4vw,76px);
+font-size:clamp(46px,5.6vw,78px);
 line-height:1;
 letter-spacing:-3px;
 margin-bottom:30px;
-max-width:850px;
+max-width:900px;
 }
 
 .hero-subtitle{
@@ -217,7 +217,7 @@ border-top:1px solid rgba(212,175,55,.15);
 }
 
 .footer-logo{
-width:100px;
+width:110px;
 height:auto;
 display:block;
 margin:0 auto 20px auto;
@@ -241,7 +241,7 @@ linear-gradient(180deg,#050505 0%,rgba(5,5,5,.78) 52%,rgba(5,5,5,.18) 100%),
 url("assets/phone2.PNG");
 background-size:cover;
 background-position:right center;
-padding:80px 8%;
+padding:65px 8%;
 align-items:flex-start;
 min-height:90vh;
 }
@@ -266,7 +266,7 @@ padding:110px 8%;
 @media(max-width:600px){
 
 .hero-logo{
-width:135px;
+width:155px;
 }
 
 h1{
