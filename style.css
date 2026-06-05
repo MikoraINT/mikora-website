@@ -7,7 +7,6 @@ padding:0;
 :root{
 --bg:#050505;
 --gold:#d4af37;
---gold-soft:rgba(212,175,55,.34);
 --text:#f6f2e8;
 --muted:#b9b3a7;
 }
@@ -26,19 +25,19 @@ overflow-x:hidden;
 
 .hero{
 min-height:92vh;
-display:grid;
-grid-template-columns:58% 42%;
+background:
+linear-gradient(90deg,#050505 0%,#050505 47%,rgba(5,5,5,.78) 61%,rgba(5,5,5,.08) 100%),
+url("assets/phone2.PNG");
+background-size:auto 100%;
+background-repeat:no-repeat;
+background-position:right center;
+display:flex;
 align-items:center;
-position:relative;
-background:#050505;
-overflow:hidden;
-padding:90px 0 90px 10%;
+padding:90px 10%;
 }
 
 .hero-copy{
 max-width:820px;
-position:relative;
-z-index:3;
 }
 
 .hero-logo{
@@ -71,27 +70,6 @@ font-size:19px;
 color:var(--muted);
 max-width:900px;
 margin-bottom:18px;
-}
-
-.hero-visual{
-position:absolute;
-right:-6vw;
-top:0;
-bottom:0;
-width:54vw;
-display:flex;
-align-items:center;
-justify-content:flex-end;
-z-index:1;
-pointer-events:none;
-}
-
-.phone-img{
-height:100%;
-width:100%;
-object-fit:cover;
-object-position:right center;
-display:block;
 }
 
 .section-line{
@@ -188,8 +166,17 @@ margin-top:18px;
 }
 
 footer{
-padding:60px 10%;
+padding:70px 10%;
 text-align:center;
+}
+
+.footer-logo{
+width:110px;
+height:auto;
+display:block;
+margin:0 auto 22px auto;
+filter:none;
+box-shadow:none;
 }
 
 footer p{
@@ -200,24 +187,17 @@ margin:0 auto;
 
 @media(max-width:1000px){
 .hero{
-grid-template-columns:1fr;
-padding:80px 7%;
-min-height:auto;
+background:
+linear-gradient(180deg,#050505 0%,rgba(5,5,5,.72) 55%,rgba(5,5,5,.15) 100%),
+url("assets/phone2.PNG");
+background-size:cover;
+background-position:right center;
+padding:80px 8%;
+align-items:flex-start;
 }
 
-.hero-visual{
-position:relative;
-right:auto;
-top:auto;
-bottom:auto;
-width:100%;
-height:520px;
-margin-top:40px;
-}
-
-.phone-img{
-object-fit:contain;
-object-position:right center;
+.hero-copy{
+max-width:720px;
 }
 
 .text-section{
@@ -245,10 +225,6 @@ font-size:19px;
 
 p{
 font-size:17px;
-}
-
-.hero-visual{
-height:420px;
 }
 
 .wide-image{
