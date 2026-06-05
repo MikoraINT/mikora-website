@@ -33,7 +33,7 @@ padding:64px 0 64px 6vw;
 background:#050505;
 overflow:hidden;
 }
-  
+
 .hero-content{
 max-width:700px;
 z-index:2;
@@ -60,6 +60,7 @@ width:120px;
 height:2px;
 background:linear-gradient(90deg,#d4af37,transparent);
 margin-bottom:32px;
+box-shadow:0 0 22px rgba(212,175,55,.45);
 }
 
 .hero-subtitle{
@@ -94,7 +95,7 @@ object-fit:contain;
 margin-right:-2vw;
 transform:none;
 }
-  
+
 section.content{
 padding:105px 9vw;
 background:#050505;
@@ -168,6 +169,7 @@ color:#fff;
 font-size:21px;
 font-weight:700;
 letter-spacing:1px;
+box-shadow:0 0 38px rgba(212,175,55,.12);
 }
 
 footer{
@@ -182,11 +184,108 @@ width:105px;
 height:auto;
 display:block;
 margin:0 auto 22px auto;
+filter:drop-shadow(0 0 22px rgba(212,175,55,.28));
 }
 
 footer p{
 color:#8f887c;
 font-size:14px;
+}
+
+/* GOLD KEYNOTE ATMOSPHERE */
+
+.content,
+.visual,
+.contact,
+footer{
+position:relative;
+overflow:hidden;
+}
+
+.content h2,
+.visual h2,
+.contact h2{
+position:relative;
+z-index:2;
+text-shadow:
+0 0 22px rgba(212,175,55,.12),
+0 0 44px rgba(212,175,55,.08);
+}
+
+.content h2::before,
+.visual h2::before,
+.contact h2::before{
+content:"";
+position:absolute;
+width:520px;
+height:220px;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+background:radial-gradient(
+ellipse,
+rgba(212,175,55,.16) 0%,
+rgba(212,175,55,.07) 35%,
+transparent 75%
+);
+filter:blur(70px);
+z-index:-1;
+pointer-events:none;
+}
+
+.content::after,
+.visual::after,
+.contact::after{
+content:"";
+position:absolute;
+width:700px;
+height:320px;
+right:-360px;
+top:50%;
+transform:translateY(-50%);
+background:radial-gradient(
+circle,
+rgba(212,175,55,.08),
+transparent 70%
+);
+filter:blur(95px);
+pointer-events:none;
+}
+
+.contact::before{
+content:"";
+position:absolute;
+width:800px;
+height:360px;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+background:radial-gradient(
+circle,
+rgba(212,175,55,.14),
+rgba(212,175,55,.05),
+transparent 72%
+);
+filter:blur(120px);
+pointer-events:none;
+}
+
+footer::before{
+content:"";
+position:absolute;
+width:520px;
+height:220px;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+background:radial-gradient(
+circle,
+rgba(212,175,55,.12),
+rgba(212,175,55,.04),
+transparent 72%
+);
+filter:blur(95px);
+pointer-events:none;
 }
 
 @media(max-width:950px){
