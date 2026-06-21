@@ -162,8 +162,8 @@ img,svg{max-width:100%;display:block}
   color:var(--stone-dim);text-align:center;margin-top:18px;text-transform:uppercase;
 }
 .sch-node{fill:var(--panel);stroke:var(--hair-strong);stroke-width:1;rx:10}
-.sch-label{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.16em;fill:var(--gold);font-weight:500}
-.sch-text{font-family:var(--font-sans);font-size:13.5px;fill:var(--ivory);font-weight:500}
+.sch-label{font-family:var(--font-mono);font-size:12.5px;letter-spacing:.16em;fill:var(--gold);font-weight:500}
+.sch-text{font-family:var(--font-sans);font-size:15px;fill:var(--ivory);font-weight:500}
 .sch-sub{font-family:var(--font-sans);font-size:12px;fill:var(--stone)}
 .sch-core{fill:#000000;stroke:var(--gold);stroke-width:1.4}   /* pitch-black interior so the logo's margin blends */
 .sch-core-label{font-family:var(--font-sans);font-weight:800;font-size:16px;letter-spacing:.18em;fill:#fff}
@@ -172,7 +172,7 @@ img,svg{max-width:100%;display:block}
 .sch-path{fill:none;stroke:var(--hair-strong);stroke-width:1.1}
 .sch-ring{
   fill:none;stroke:var(--gold);stroke-width:1;stroke-dasharray:3 7;opacity:.7;
-  transform-origin:360px 230px;
+  transform-origin:360px 270px;
   animation:spin 48s linear infinite;
 }
 .flow{fill:var(--gold-bright)}
@@ -452,69 +452,69 @@ footer{border-top:1px solid var(--hair);padding:56px var(--pad-x) 44px;backgroun
 
   <div class="schematic-wrap">
     <!-- Signature schematic: the intelligence layer -->
-    <svg class="schematic" viewBox="0 0 720 460" role="img" aria-labelledby="schTitle schDesc">
+    <svg class="schematic" viewBox="0 0 720 540" role="img" aria-labelledby="schTitle schDesc">
       <title id="schTitle">How the Mikora intelligence layer works</title>
       <desc id="schDesc">Questions and enquiries from team members and customers flow into the Mikora layer. Routine questions are answered in seconds from approved knowledge, high-risk questions are escalated to the right specialist, and new leads are captured, scored and synced to your CRM.</desc>
 
       <!-- clip keeps the core logo strictly inside the circle (never touching the gold rim) -->
       <defs>
-        <clipPath id="coreClip"><circle cx="360" cy="230" r="53"/></clipPath>
+        <clipPath id="coreClip"><circle cx="360" cy="270" r="57"/></clipPath>
       </defs>
 
       <!-- connectors: in -->
-      <path class="sch-path" d="M212,69 C262,69 268,176 292,209"/>
-      <path class="sch-path" d="M212,230 L282,230"/>
-      <path class="sch-path" d="M212,391 C262,391 268,284 292,251"/>
+      <path class="sch-path" d="M212,81 C274,81 280,216 294,249"/>
+      <path class="sch-path" d="M212,270 L294,270"/>
+      <path class="sch-path" d="M212,459 C274,459 280,324 294,291"/>
       <!-- connectors: out -->
-      <path class="sch-path" d="M428,209 C452,176 458,69 508,69"/>
-      <path class="sch-path" d="M438,230 L508,230"/>
-      <path class="sch-path" d="M428,251 C452,284 458,391 508,391"/>
+      <path class="sch-path" d="M426,249 C452,216 458,81 508,81"/>
+      <path class="sch-path" d="M426,270 L508,270"/>
+      <path class="sch-path" d="M426,291 C452,324 458,459 508,459"/>
 
       <!-- flow particles -->
-      <circle class="flow" r="3.4"><animateMotion dur="3.2s" begin="0s" repeatCount="indefinite" path="M212,69 C262,69 268,176 292,209"/></circle>
-      <circle class="flow" r="3.4"><animateMotion dur="2.7s" begin="1.1s" repeatCount="indefinite" path="M212,230 L282,230"/></circle>
-      <circle class="flow" r="3.4"><animateMotion dur="3.4s" begin="2s" repeatCount="indefinite" path="M212,391 C262,391 268,284 292,251"/></circle>
-      <circle class="flow" r="3.4"><animateMotion dur="3.1s" begin=".6s" repeatCount="indefinite" path="M428,209 C452,176 458,69 508,69"/></circle>
-      <circle class="flow" r="3.4"><animateMotion dur="2.8s" begin="1.7s" repeatCount="indefinite" path="M438,230 L508,230"/></circle>
-      <circle class="flow" r="3.4"><animateMotion dur="3.3s" begin="2.5s" repeatCount="indefinite" path="M428,251 C452,284 458,391 508,391"/></circle>
+      <circle class="flow" r="3.6"><animateMotion dur="3.2s" begin="0s" repeatCount="indefinite" path="M212,81 C274,81 280,216 294,249"/></circle>
+      <circle class="flow" r="3.6"><animateMotion dur="2.7s" begin="1.1s" repeatCount="indefinite" path="M212,270 L294,270"/></circle>
+      <circle class="flow" r="3.6"><animateMotion dur="3.4s" begin="2s" repeatCount="indefinite" path="M212,459 C274,459 280,324 294,291"/></circle>
+      <circle class="flow" r="3.6"><animateMotion dur="3.1s" begin=".6s" repeatCount="indefinite" path="M426,249 C452,216 458,81 508,81"/></circle>
+      <circle class="flow" r="3.6"><animateMotion dur="2.8s" begin="1.7s" repeatCount="indefinite" path="M426,270 L508,270"/></circle>
+      <circle class="flow" r="3.6"><animateMotion dur="3.3s" begin="2.5s" repeatCount="indefinite" path="M426,291 C452,324 458,459 508,459"/></circle>
 
       <!-- left: questions in -->
       <g>
-        <rect class="sch-node" x="12" y="30" width="200" height="78" rx="10"/>
-        <text class="sch-label" x="28" y="58">WEBSITE VISITOR</text>
-        <text class="sch-text" x="28" y="82">“Do you cover my area?”</text>
+        <rect class="sch-node" x="12" y="36" width="200" height="90" rx="10"/>
+        <text class="sch-label" x="28" y="70">WEBSITE VISITOR</text>
+        <text class="sch-text" x="28" y="99">“Do you cover my area?”</text>
       </g>
       <g>
-        <rect class="sch-node" x="12" y="191" width="200" height="78" rx="10"/>
-        <text class="sch-label" x="28" y="219">FIELD ENGINEER</text>
-        <text class="sch-text" x="28" y="243">“Is this in tolerance?”</text>
+        <rect class="sch-node" x="12" y="225" width="200" height="90" rx="10"/>
+        <text class="sch-label" x="28" y="259">FIELD ENGINEER</text>
+        <text class="sch-text" x="28" y="288">“Is this in tolerance?”</text>
       </g>
       <g>
-        <rect class="sch-node" x="12" y="352" width="200" height="78" rx="10"/>
-        <text class="sch-label" x="28" y="380">BRANCH MANAGER</text>
-        <text class="sch-text" x="28" y="404">“What’s the policy here?”</text>
+        <rect class="sch-node" x="12" y="414" width="200" height="90" rx="10"/>
+        <text class="sch-label" x="28" y="448">BRANCH MANAGER</text>
+        <text class="sch-text" x="28" y="477">“What’s the policy here?”</text>
       </g>
 
       <!-- core -->
-      <circle class="sch-ring" cx="360" cy="230" r="76"/>
-      <circle class="sch-core" cx="360" cy="230" r="56"/>
-      <image class="diagram-logo" href="/assets/logo.png" x="320" y="190" width="80" height="80" preserveAspectRatio="xMidYMid meet" clip-path="url(#coreClip)" role="img" aria-label="Mikora Intelligence Layer"/>
+      <circle class="sch-ring" cx="360" cy="270" r="84"/>
+      <circle class="sch-core" cx="360" cy="270" r="62"/>
+      <image class="diagram-logo" href="/assets/logo.png" x="315" y="225" width="90" height="90" preserveAspectRatio="xMidYMid meet" clip-path="url(#coreClip)" role="img" aria-label="Mikora Intelligence Layer"/>
 
       <!-- right: capability out -->
       <g>
-        <rect class="sch-node" x="508" y="30" width="200" height="78" rx="10"/>
-        <text class="sch-label" x="524" y="58">ANSWERED · SECONDS</text>
-        <text class="sch-sub" x="524" y="82">From your approved knowledge</text>
+        <rect class="sch-node" x="508" y="36" width="200" height="90" rx="10"/>
+        <text class="sch-label" x="524" y="70">ANSWERED · SECONDS</text>
+        <text class="sch-sub" x="524" y="99">From your approved knowledge</text>
       </g>
       <g>
-        <rect class="sch-node" x="508" y="191" width="200" height="78" rx="10"/>
-        <text class="sch-label" x="524" y="219">ESCALATED</text>
-        <text class="sch-sub" x="524" y="243">Routed to the right specialist</text>
+        <rect class="sch-node" x="508" y="225" width="200" height="90" rx="10"/>
+        <text class="sch-label" x="524" y="259">ESCALATED</text>
+        <text class="sch-sub" x="524" y="288">Routed to the right specialist</text>
       </g>
       <g>
-        <rect class="sch-node" x="508" y="352" width="200" height="78" rx="10"/>
-        <text class="sch-label" x="524" y="380">CAPTURED</text>
-        <text class="sch-sub" x="524" y="404">Scored &amp; synced to CRM</text>
+        <rect class="sch-node" x="508" y="414" width="200" height="90" rx="10"/>
+        <text class="sch-label" x="524" y="448">CAPTURED</text>
+        <text class="sch-sub" x="524" y="477">Scored &amp; synced to CRM</text>
       </g>
     </svg>
     <p class="schematic-caption">Questions and leads in — capability out</p>
